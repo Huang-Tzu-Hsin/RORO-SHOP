@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    /* background-color: #2A403D; */
+    background-color: rgba(7, 14, 11, 0.8);
+    height: 80px;
+    width: 100%;
+    position: fixed;  /*固定導覽列*/
+    z-index: 5; /*改變層疊排序*/
+}
+
+header h1 {
+    color: #C3CBD6;
+    position: absolute;
+    top: 0;
+    line-height: 80px;
+    background-image: url(../img/LOGO/head1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -101%;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
+}
+
+
+/* 將導覽列設為絕對位置 */
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+    
+}
+
+header a {
+    color: #C3CBD6;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header li {
+    display: inline;
+    margin-right: 4vw;
+}
+
+/* 漢堡選單隱藏 */
+.menu{
+    display: none;
+}
+
+/* 商品介面 */
+.productlist {
+    display: flex;
+    background-color: #485652;
+    justify-content: space-between;
+    /*平均分佈水平軸線*/
+    align-items: center;
+    padding: 100px 180px 80px;
+}
+
+.productlist div {
+    width:300px;
+    text-align: center;
+}
+
+.productlist li{
+    list-style: none;
+    float: left;
+    padding: 0 5px 0 10px;
+}
+
+.productlist h3{
+    margin-top: 5px;
+    margin-bottom: 4px;
+    font-size: 2.8vh;
+}
+
+.productlist span{
+    color: #ecc085c7;
+}
+
+.productlist img {
+    width: 70%;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: px;
+    transform:scale(1,1);  /*控制元素的縮放(x,y)*/
+    transition: all 1s ease-out; /*轉場效果*/
+}
+
+.productlist img:hover{
+    transform:scale(0.9,0.9);
+    cursor: pointer; 
+}
+
+/* section5 */
+.newsletter {
+    background-color: #bbb7b3c0;
+    color: #806859;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter p {
+    margin-bottom: 20px;
+}
+
+.newsletter input, .newsletter button {
+    background-color: transparent; /*透明背景*/
+    color: #806859;
+    border: 1.8px solid #949d9a;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.newsletter input {
+    width: 200px;
+    margin-right: 15px;
+}
+
+.newsletter button {
+    width: 80px;
+    cursor: pointer;
+    /*滑鼠移過去變手指*/
+}
+
+/*改變提示文字顏色*/
+input::placeholder {
+    color: #a8988e;
+}
+
+input:focus {
+    outline: none;
+    border-color: #25201f;
+}
+footer {
+    background-color: #000;
+    color: #b7b7b7;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+
+/* 響應式設計 (可配合各種螢幕大小)*/
+@media screen and (max-width: 768px) {
+    header ul {
+        display: none;
+    }
+    header h1{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .news h2{
+        font-size: 40px;   
+    }
+  /* 叫出漢堡選單 */  
+  .menu{
+    display: block;
+    background-color: transparent;
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .shop{
+    flex-direction: column;
+  }
+  .shop img{
+    width: 100%;
+  };
+  .info{
+    width: 100%;
+    padding: 40px 0;
+  }
+  .info h2{
+    font-size: 30px;
+  }
+  .product{
+    flex-direction: column;
+    padding: 60px 0;
+  }
+  .product div{
+    margin-bottom: 30px;
+  };
+}
