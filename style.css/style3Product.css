@@ -100,6 +100,61 @@ header li {
     cursor: pointer; 
 }
 
+/* 購物車 */
+.cart {
+    background-color: #3b4a47;
+    color: #ecc085c7;
+    padding: 20px;
+    margin: 20px 100px;
+    border-radius: 10px;
+}
+
+.cart h2 {
+    font-size: 3vh;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #eceff1c7;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ecc085c7;
+    padding-bottom: 5px;
+}
+
+.cart-items li:last-child {
+    border-bottom: none;
+}
+
+.total-price {
+    font-weight: bold;
+    font-size: 3vh;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    background-color: #b7b7b7;
+    color: #0a0c0c;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #c9b8a6c7;
+}
+
 /* section5 */
 .newsletter {
     background-color: #bbb7b3c0;

@@ -6,7 +6,7 @@
 
 header {
     /* background-color: #2A403D; */
-    background-color: rgba(7, 14, 11,0.8);
+    background-color: rgba(7, 14, 11,0.9);
     height: 80px;
     width: 100%;
     position: fixed;  /*固定導覽列*/
@@ -61,21 +61,15 @@ header li {
 .news {
     color: white;
     height: 55vw;
-    background-image: url(../img/盆栽/store1.jpg);
-    /* 設定背景為透明度為 0.6的黑色 */
+    background-size: cover; /* 確保背景圖片覆蓋整個容器 */
+    background-position: center; /* 確保背景圖片在容器內居中 */
     background-color: rgba(0, 0, 0,0.7);
-    /* 設置背景混合模式為相乘模式 */
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-blend-mode: multiply;  /* 設置背景混合模式為相乘模式 */
     display: flex;
-    /* 由上往下排 */
     flex-direction: column;
-    /*垂直對齊:中央*/
     align-items: center;
-    /*水平對齊:中央*/
     justify-content: center;
+    transition: background-image 1.5s ease-in-out; /* 平滑過渡 */
 }
 
 .news h2 {
@@ -91,11 +85,8 @@ header li {
 .news a {
     color: white;
     text-decoration: none;
-    /* 加上細邊框 */
     border: 1px solid #acacac;
-    /* 調整內邊距 */
     padding: 5px 10px;
-    /* 邊框半徑，圓角 */
     border-radius: 5px;
 }
 
