@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
-        '../img/盆栽/輪播30.jPG',
         '../img/盆栽/輪播20.jpg',
-        '../img/盆栽/輪播10.Jpg'
     ];
 
     let currentIndex = 0;
