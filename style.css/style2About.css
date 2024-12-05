@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    /* background-color: #2A403D; */
+    background-color: rgba(7, 14, 11, 0.8);
+    height: 80px;
+    width: 100%;
+    position: fixed;  /*fixed固定導覽列*/
+}
+
+header h1 {
+    color: #C3CBD6;
+    position: absolute;
+    top: 0;
+    line-height: 80px;
+    background-image: url(../img/LOGO/head1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -101%;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
+}
+
+/* 將導覽列設為絕對位置 */
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+}
+
+header a {
+    color: #C3CBD6;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header li {
+    display: inline;
+    margin-right: 4vw;
+}
+
+/* 漢堡選單隱藏 */
+.menu{
+    display: none;
+}
+
+/* section1 */
+.about{
+background-color: #aabb9ae7;
+color: #010703fd;
+}
+
+.borderDemo {
+    padding: 20px;
+    border: 4px solid #143f1a;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bolder;
+    }
+
+.us{ 
+    height: 50vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vh;
+    line-height: 1.4em;
+    padding:1px 100px;
+}
+
+.us img{
+    width: 30vw;
+    margin: 80px 30px 0 0;
+}
+.contant{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+
+/* section5 */
+.newsletter {
+    background-color: #bbb7b3c0;
+    color: #806859;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter p {
+    margin-bottom: 20px;
+}
+
+.newsletter input, .newsletter button {
+    background-color: transparent;
+    /*透明背景*/
+    color: #806859;
+    border: 1.8px solid #949d9a;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.newsletter input {
+    width: 200px;
+    margin-right: 15px;
+}
+
+.newsletter button {
+    width: 80px;
+    cursor: pointer;
+    /*滑鼠移過去變手指*/
+}
+
+/*改變提示文字顏色*/
+input::placeholder {
+    color: #a8988e;
+}
+
+input:focus {
+    outline: none;
+    border-color: #25201f;
+}
+
+footer {
+    background-color: #000;
+    color: #b7b7b7;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+
+/* 響應式設計 (可配合各種螢幕大小)*/
+@media screen and (max-width: 768px) {
+    header ul {
+        display: none;
+    }
+    header h1{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .news h2{
+        font-size: 40px;   
+    }
+  /* 叫出漢堡選單 */  
+  .menu{
+    display: block;
+    background-color: transparent;
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .shop{
+    flex-direction: column;
+  }
+  .shop img{
+    width: 100%;
+  };
+  .info{
+    width: 100%;
+    padding: 40px 0;
+  }
+  .info h2{
+    font-size: 30px;
+  }
+  .product{
+    flex-direction: column;
+    padding: 60px 0;
+  }
+  .product div{
+    margin-bottom: 30px;
+  };
+}
